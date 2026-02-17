@@ -4,23 +4,31 @@ import java.util.Scanner;
 
 public class DrawingShapes {
   public static void main(String[] args){
+    // Added Scanner Variable
     Scanner scnr = new Scanner(System.in);
+
+    // Initialized Loop Variables
     int i;
     int j;
 
+    // User inputs a character (Shape Type)
     System.out.println("Enter a shape: r t h o p");
-    char Shape = scnr.next().charAt(0);;
+    // To ensure compatible data types (char)
+    char Shape = scnr.next().charAt(0);
 
+    // Checks if user input for shape type is r, t, h, o, or p
     if ((Shape == 'r') | (Shape == 't') | (Shape == 'h') | (Shape == 'o') | (Shape == 'p')) {
       System.out.println("Enter a length: ");
       int Len = scnr.nextInt();
 
+      // Checks if user input for side length is greater than 1
       if (Len > 1) {
         switch (Shape) {
           case 'r' -> {
             System.out.println("Enter a height: ");
             int Hei = scnr.nextInt();
 
+            // Checks if user input for rectangle height is greater than 1
             if (Hei > 1) {
               System.out.printf("Below is a %d by %d rectangle of * %n", Len, Hei);
 
