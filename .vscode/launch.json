@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DrawingShapes",
+      "request": "launch",
+      "mainClass": "Project01.DrawingShapes",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "Driver",
       "request": "launch",
       "mainClass": "InClassActivity.Week4.Driver",
