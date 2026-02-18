@@ -1,9 +1,7 @@
 package InClassActivity.ICA03;
 
 public class Driver {
-
     public static void main(String[] args) {
-
         // Display cooler status before adding any drinks
         System.out.println("Is cooler empty?  "+Tailgater.isCoolerEmpty());
 

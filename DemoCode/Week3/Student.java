@@ -3,7 +3,7 @@ package DemoCode.Week3;
 // import java.util.Scanner;
 
 public class Student {
-    public String name ;
+    public String name;
     public int age;
     public double gpa;
     public String graduationYear;
