@@ -3,9 +3,14 @@ package InClassActivity.ICA03;
 public class Tailgater {
   private static int drinksInCooler;
   private static int numberOfTailgaters;
-  private String name;
-  private boolean isBingFan;
+  private final String name;
+  private final boolean isBingFan;
   public int drinks;
+
+  public Tailgater(String name, boolean isBingFan) {
+    this.name = name;
+    this.isBingFan = isBingFan;
+  }
 
   public String getName() {
     return this.name;
