@@ -41,10 +41,19 @@ public class DrawingShapes {
             }
             else System.out.printf("Height must be greater than 1%nGoodbye!%n");
           }
-          case 't' -> System.out.printf("Below is a triangle with two side lengths of %d *%n", Len);
-          case 'h' -> System.out.printf("Below is a hexagon with side lengths of %d *%n", Len);
-          case 'o' -> System.out.printf("Below is an octagon with side lengths of %d *%n", Len);
-          case 'p' -> System.out.printf("Below is a pentagon with 4 side lengths of %d *%n", Len);
+          case 't' -> {
+            System.out.printf("Below is a triangle with two side lengths of %d *%n", Len);
+            
+          }
+          case 'h' -> {
+            System.out.printf("Below is a hexagon with side lengths of %d *%n", Len);
+          }
+          case 'o' -> {
+            System.out.printf("Below is an octagon with side lengths of %d *%n", Len);
+          }
+          case 'p' -> {
+            System.out.printf("Below is a pentagon with 4 side lengths of %d *%n", Len);
+          }
         }
       }
       else System.out.printf("Length must be greater than 1%nGoodbye!%n");

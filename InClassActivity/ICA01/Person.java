@@ -1,4 +1,4 @@
-package InClassActivity.Week4;
+package InClassActivity.ICA01;
 
 public class Person {
   public String name;
