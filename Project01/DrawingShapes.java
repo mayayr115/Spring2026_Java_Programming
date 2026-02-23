@@ -43,7 +43,17 @@ public class DrawingShapes {
           }
           case 't' -> {
             System.out.printf("Below is a triangle with two side lengths of %d *%n", Len);
-            
+            int tSide = 1;
+            for (i = 1; i <= Len; i++) {
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < tSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+              tSide += 2;
+            }
           }
           case 'h' -> {
             System.out.printf("Below is a hexagon with side lengths of %d *%n", Len);
@@ -53,6 +63,27 @@ public class DrawingShapes {
           }
           case 'p' -> {
             System.out.printf("Below is a pentagon with 4 side lengths of %d *%n", Len);
+            // Top part of Pentagon (Triangle)
+            int pSide = 1;
+            for (i = 1; i <= Len; i++) {
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < pSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+              pSide += 2;
+            }
+
+            // Bottom part of Pentagon (Rectangle)
+            for (i = 0; i < Len - 1; i++) {
+              //System.out.printf(" ");
+              for (j = 0; j < pSide-2; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+            }
           }
         }
       }
