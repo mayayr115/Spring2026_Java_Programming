@@ -70,6 +70,7 @@ public class DrawingShapes {
               hSide += 2;
             }
             hSide -= 2;
+            
             // Bottom half
             for (i = Len - 1; i >= 1; i--) {
               hSide -= 2;
@@ -84,6 +85,38 @@ public class DrawingShapes {
           }
           case 'o' -> {
             System.out.printf("Below is an octagon with side lengths of %d *%n", Len);
+            int oSide = Len;
+            // Top half (Trapezoid)
+            for (i = 1; i <= Len; i++) {
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < oSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+              oSide += 2;
+            }
+            // Middle (Rectangle)
+            for (i = 0; i < Len - 1; i++) {
+              for (j = 0; j < oSide - 2; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+            }
+            oSide -= 2;
+
+            // Bottom Half
+            for (i = Len - 1; i >= 1; i--) {
+              oSide -= 2;
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < oSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+            }
           }
           case 'p' -> {
             System.out.printf("Below is a pentagon with 4 side lengths of %d *%n", Len);
@@ -102,8 +135,7 @@ public class DrawingShapes {
 
             // Bottom part of Pentagon (Rectangle)
             for (i = 0; i < Len - 1; i++) {
-              //System.out.printf(" ");
-              for (j = 0; j < pSide-2; j++) {
+              for (j = 0; j < pSide - 2; j++) {
                 System.out.printf("*");
               }
               System.out.println();
