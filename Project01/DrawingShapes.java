@@ -57,6 +57,30 @@ public class DrawingShapes {
           }
           case 'h' -> {
             System.out.printf("Below is a hexagon with side lengths of %d *%n", Len);
+            int hSide = Len;
+            // Top half
+            for (i = 1; i <= Len; i++) {
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < hSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+              hSide += 2;
+            }
+            hSide -= 2;
+            // Bottom half
+            for (i = Len - 1; i >= 1; i--) {
+              hSide -= 2;
+              for (j = 0; j < Len - i; j++) {
+                System.out.printf(" ");
+              }
+              for (j = 0; j < hSide; j++) {
+                System.out.printf("*");
+              }
+              System.out.println();
+            }
           }
           case 'o' -> {
             System.out.printf("Below is an octagon with side lengths of %d *%n", Len);
