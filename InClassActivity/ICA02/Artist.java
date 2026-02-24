@@ -7,22 +7,33 @@ public class Artist {
 
     // No-argument constructor
     public Artist() {
-        //Add code here
+        this.name = "Unknown";
+        this.numFans = 0;
+        this.albums = new String[0];
     }
 
     // Parameterized constructor
     public Artist(String name, int numFans, String[] albums) {
-        //Add code here
+        this.name = name;
+        this.numFans = numFans;
+        this.albums = new String[albums.length];
     }
 
     // Copy constructor (deep copy)
     public Artist(Artist anotherArtist) {
-        //Add code here
+        this.name = anotherArtist.name;
+        this.numFans = anotherArtist.numFans;
+        this.albums = new String[anotherArtist.albums.length];
     }
 
     // Method to set info , deep copy of albums array
     public void setInfo(String name, int numFans, String[] albums) {
-        //Add code here
+        this.name = name;
+        this.numFans = numFans;
+        this.albums = new String[albums.length];
+        for (int i = 0; i < albums.length; i++) {
+            this.albums[i] = albums[i];
+        }
     }
 
     // Method to display artist info
