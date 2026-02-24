@@ -17,6 +17,9 @@ public class Artist {
         this.name = name;
         this.numFans = numFans;
         this.albums = new String[albums.length];
+        for (int i = 0; i < albums.length; i++) {
+            this.albums[i] = albums[i];
+        }
     }
 
     // Copy constructor (deep copy)
