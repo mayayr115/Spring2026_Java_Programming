@@ -24,6 +24,7 @@ public class DrawingShapes {
       // Checks if user input for side length is greater than 1
       if (Len > 1) {
         switch (Shape) {
+          // Draws Rectangle
           case 'r' -> {
             System.out.println("Enter a height: ");
             int Hei = scnr.nextInt();
@@ -41,6 +42,7 @@ public class DrawingShapes {
             }
             else System.out.printf("Height must be greater than 1%nGoodbye!%n");
           }
+          // Draws Triangle
           case 't' -> {
             System.out.printf("Below is a triangle with two side lengths of %d *%n", Len);
             int tSide = 1;
@@ -55,6 +57,7 @@ public class DrawingShapes {
               tSide += 2;
             }
           }
+          // Draws Hexagon
           case 'h' -> {
             System.out.printf("Below is a hexagon with side lengths of %d *%n", Len);
             int hSide = Len;
@@ -70,7 +73,7 @@ public class DrawingShapes {
               hSide += 2;
             }
             hSide -= 2;
-            
+
             // Bottom half
             for (i = Len - 1; i >= 1; i--) {
               hSide -= 2;
@@ -83,6 +86,7 @@ public class DrawingShapes {
               System.out.println();
             }
           }
+          // Draws Octagon
           case 'o' -> {
             System.out.printf("Below is an octagon with side lengths of %d *%n", Len);
             int oSide = Len;
@@ -118,6 +122,7 @@ public class DrawingShapes {
               System.out.println();
             }
           }
+          // Draws Pentagon
           case 'p' -> {
             System.out.printf("Below is a pentagon with 4 side lengths of %d *%n", Len);
             // Top part of Pentagon (Triangle)
