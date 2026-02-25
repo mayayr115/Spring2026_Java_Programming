@@ -1,4 +1,4 @@
-package Lab;
+package Lab.Lab02;
 import java.util.Scanner;
 
 public class ParseTheTweet {

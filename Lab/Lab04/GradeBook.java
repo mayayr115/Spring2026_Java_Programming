@@ -1,4 +1,4 @@
-package Lab;
+package Lab.Lab04;
 
 public class GradeBook {
   private double[] grades;

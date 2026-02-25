@@ -1,4 +1,4 @@
-package Lab.CS210_HelloWorld;
+package Lab.Lab01.CS210_HelloWorld;
 
 public class HelloWorld {
     public static void main (String[] args) {
