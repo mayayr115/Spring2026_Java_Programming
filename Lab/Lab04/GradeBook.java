@@ -9,41 +9,53 @@ public class GradeBook {
 
   public GradeBook(GradeBook otherGradeBook) {
     this.grades = new double[otherGradeBook.grades.length];
-    for (int i = 0; i < grades.length; i++) {
-      this.grades[i] = grades[i];
+    for (int i = 0; i < otherGradeBook.grades.length; i++) {
+      this.grades[i] = otherGradeBook.grades[i];
     }
   }
 
   public GradeBook(double[] newGrades) {
-
+    setGrades(newGrades);
   }
 
   public GradeBook(float[] newGrades) {
-    
+    setGrades(newGrades);
   }
 
   public GradeBook(int[] newGrades) {
-    
+    setGrades(newGrades);
   }
 
   public GradeBook(long[] newGrades) {
-    
+    setGrades(newGrades);
   }
 
   public void setGrades(float[] newGrades) {
-    
+    this.grades = new double[newGrades.length];
+    for (int i = 0; i < newGrades.length; i++) {
+      this.grades[i] = newGrades[i];
+    }
   }
 
   public void setGrades(double[] newGrades) {
-    
+    this.grades = new double[newGrades.length];
+    for (int i = 0; i < newGrades.length; i++) {
+      this.grades[i] = newGrades[i];
+    }
   }
 
   public void setGrades(int[] newGrades) {
-    
+    this.grades = new double[newGrades.length];
+    for (int i = 0; i < newGrades.length; i++) {
+      this.grades[i] = newGrades[i];
+    }
   }
 
   public void setGrades(long[] newGrades) {
-    
+    this.grades = new double[newGrades.length];
+    for (int i = 0; i < newGrades.length; i++) {
+      this.grades[i] = newGrades[i];
+    }
   }
 
   public double[] getGrades() {
@@ -55,24 +67,69 @@ public class GradeBook {
   }
 
   public String toString() {
-    // String strGrades = (String) grades;
-    // return strGrades;
-    return " ";
+    String result = "[";
+
+    for (int i = 0; i < grades.length; i++) {
+      result += grades[i];
+
+      if (i < grades.length - 1) {
+        result += " ";
+      }
+    }
+    return result + "]";
   }
 
   public double minGrade() {
-    return 0.0;
+    if (grades.length == 0) return Double.NaN;  // nothing to return
+    double min = grades[0];
+    for (int i = 1; i < grades.length; i++) {
+      if (grades[i] < min) {
+        min = grades[i];
+      }
+    }
+    return min;
   }
 
   public double maxGrade() {
-    return 0.0;
+    if (grades.length == 0) return Double.NaN;  // nothing to return
+    double max = grades[0];
+    for (int i = 1; i < grades.length; i++) {
+      if (grades[i] > max) {
+        max = grades[i];
+      }
+    }
+    return max;
   }
 
   public double averageGrade() {
-    return 0.0;
+    if (grades.length == 0) return Double.NaN;  // nothing to return
+    double total = 0.0;
+    for (int i = 0; i < grades.length; i++) {
+      total += grades[i];
+    }
+    return total / grades.length;
   }
 
   public double modeGrade() {
-    return 0.0;
+    if (grades.length == 0) return Double.NaN;  // nothing to return
+    double mode = grades[0];
+    int maxCount = 0;
+
+    // Iterate through array
+    for (int i = 0; i < grades.length; i++) {
+      int count = 0;
+
+      // Pointer Loop for array
+      for (int j = 0; j < grades.length; j++) {
+        if (grades[j] == grades[i]) count++;
+      }
+
+      if (count > maxCount) {
+        maxCount = count;
+        mode = grades[i];
+      }
+    }
+    if (maxCount == 1) return Double.NaN;
+    return mode;
   }
 }

@@ -8,6 +8,13 @@
       "type": "java",
       "name": "Driver",
       "request": "launch",
+      "mainClass": "Lab.Lab04.Driver",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
+      "name": "Driver",
+      "request": "launch",
       "mainClass": "InClassActivity.ICA02.Driver",
       "projectName": "CS210_70c460d7"
     },
