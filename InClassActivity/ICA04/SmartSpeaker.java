@@ -3,7 +3,8 @@ package InClassActivity.ICA04;
 public class SmartSpeaker extends SmartDevice {
   private int volume;
   
-  public SmartSpeaker(int volume) {
+  public SmartSpeaker(String name, int volume) {
+    super(name);
     this.volume = volume;
   }
 

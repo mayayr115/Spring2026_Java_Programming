@@ -3,7 +3,8 @@ package InClassActivity.ICA04;
 public class SmartThermostat extends SmartDevice {
   private int temperature;
 
-  public SmartThermostat(int temperature) {
+  public SmartThermostat(String name, int temperature) {
+    super(name);
     this.temperature = temperature;
   }
 
