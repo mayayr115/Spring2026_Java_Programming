@@ -6,6 +6,7 @@ public abstract class SmartDevice {
 
   public SmartDevice(String name) {
     this.name = name;
+    this.status = false;
   }
 
   public abstract void turnOn();
@@ -13,8 +14,8 @@ public abstract class SmartDevice {
   public abstract void adjustSettings(int value);
 
   public void displayStatus() {
-    if (!this.status) System.out.printf("%s is OFF", this.name);
-    else System.out.printf("%s is now ON.", this.name);
+    if (!this.status) System.out.printf("%s is OFF.%n", this.name);
+    else System.out.printf("%s is now ON. ", this.name);
   }
 
   public String getName() {

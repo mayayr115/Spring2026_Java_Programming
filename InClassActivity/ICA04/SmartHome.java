@@ -3,17 +3,21 @@ package InClassActivity.ICA04;
 import java.util.ArrayList;
 
 public class SmartHome {
-
-  public static void printArrayList(ArrayList<Object> objList) {
+  public static void printArrayList(ArrayList<SmartDevice> objList) {
     for (int i = 0; i < objList.size(); ++i) {
-      System.out.println(objList.get(i));
+      (objList.get(i)).displayStatus();
+      (objList.get(i)).turnOn();
+      if (objList.get(i) instanceof SmartSpeaker) (objList.get(i)).adjustSettings(50);
+      else (objList.get(i)).adjustSettings(68);
+      (objList.get(i)).turnOff();
+      System.out.println();
     }
   }
   public static void main(String[] args){
-    ArrayList<Object> objList = new ArrayList<>();
+    ArrayList<SmartDevice> objList = new ArrayList<>();
 
-    objList.add(new SmartThermostat("Bedroom", 72));
-    objList.add(new SmartSpeaker("Kitchen", 100));
+    objList.add(new SmartThermostat("Bedroom Thermostat", 72));
+    objList.add(new SmartSpeaker("Kitchen Speaker", 100));
 
     printArrayList(objList);
   }
