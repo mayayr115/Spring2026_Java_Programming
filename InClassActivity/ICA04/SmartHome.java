@@ -7,7 +7,7 @@ public class SmartHome {
     for (int i = 0; i < objList.size(); ++i) {
       (objList.get(i)).displayStatus();
       (objList.get(i)).turnOn();
-      if (objList.get(i) instanceof SmartSpeaker) (objList.get(i)).adjustSettings(50);
+      if (objList.get(i) instanceof SmartSpeaker) (objList.get(i)).adjustSettings(100);
       else (objList.get(i)).adjustSettings(68);
       (objList.get(i)).turnOff();
       System.out.println();
@@ -17,7 +17,7 @@ public class SmartHome {
     ArrayList<SmartDevice> objList = new ArrayList<>();
 
     objList.add(new SmartThermostat("Bedroom Thermostat", 72));
-    objList.add(new SmartSpeaker("Kitchen Speaker", 100));
+    objList.add(new SmartSpeaker("Kitchen Speaker", 50));
 
     printArrayList(objList);
   }

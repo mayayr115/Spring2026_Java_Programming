@@ -14,7 +14,7 @@ public abstract class SmartDevice {
   public abstract void adjustSettings(int value);
 
   public void displayStatus() {
-    if (!this.status) System.out.printf("%s is OFF.%n", this.name);
+    if (!this.status) System.out.printf("%s is now OFF.%n", this.name);
     else System.out.printf("%s is now ON. ", this.name);
   }
 
