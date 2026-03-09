@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Driver",
+      "request": "launch",
+      "mainClass": "Lab.Lab05.Driver",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "SmartHome",
       "request": "launch",
       "mainClass": "InClassActivity.ICA04.SmartHome",

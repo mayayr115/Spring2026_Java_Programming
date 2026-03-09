@@ -24,8 +24,7 @@ public class Driver {
     Video video = new Video("Java Tutorial",
     "Michelle Decamora", 30.0);
     video.displayInfo();
-    System.out.println("Estimated Watching Time: "
-    + video.calculateReadingTime() + " minutes");
+    System.out.println("Estimated Watching Time: " + video.calculateReadingTime() + " minutes");
     video.watch();
     video.publish();
 
@@ -38,8 +37,7 @@ public class Driver {
     article2.read();
 
     //Test#05
-    Podcast podcast2 = new Podcast("Advanced Java",
-    "Michael Brown", 40.0, true);
+    Podcast podcast2 = new Podcast("Advanced Java", "Michael Brown", 40.0, true);
     podcast2.displayInfo();
     System.out.println("Estimated Reading Time: "
     + podcast2.calculateReadingTime() + " minutes");
@@ -47,11 +45,9 @@ public class Driver {
     podcast2.watch();
 
     //Test#06
-    Article miniArticle = new Article("Java Keywords",
-    "Chris Lee", 50);
+    Article miniArticle = new Article("Java Keywords", "Chris Lee", 50);
     miniArticle.displayInfo();
-    System.out.println("Estimated Reading Time: "
-    + miniArticle.calculateReadingTime() + " minutes");
+    System.out.println("Estimated Reading Time: " + miniArticle.calculateReadingTime() + " minutes");
     miniArticle.read();
 
     // Test #07
@@ -60,8 +56,7 @@ public class Driver {
     "Dr. Smith",
     800);
     content1.displayInfo();
-    System.out.println("Estimated Reading Time: "
-    + content1.calculateReadingTime() + " minutes");
+    System.out.println("Estimated Reading Time: " + content1.calculateReadingTime() + " minutes");
     content1.publish();
 
     // Test #08
@@ -87,8 +82,7 @@ public class Driver {
     };
     for (Content c : contents) {
       c.displayInfo();
-      System.out.println("Estimated Time: "
-      + c.calculateReadingTime() + " minutes");
+      System.out.println("Estimated Time: " + c.calculateReadingTime() + " minutes");
       c.publish();
       System.out.println();
     }
