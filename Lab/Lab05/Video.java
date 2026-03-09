@@ -1,5 +1,9 @@
 package Lab.Lab05;
 
+// Maya Ramkishun
+// 3/9/26
+// This program extends the Content class and implements the Watchable.watch() method
+
 public class Video extends Content implements Watchable {
   private final double duration;
 

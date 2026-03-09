@@ -1,5 +1,9 @@
 package Lab.Lab05;
 
+// Maya Ramkishun
+// 3/9/26
+// This program extends the Content class and implements both the Readable.read() method and the Watchable.watch() method
+
 public class Podcast extends Content implements Watchable, Readable {
   private final double duration;
   boolean transcript;
@@ -17,7 +21,7 @@ public class Podcast extends Content implements Watchable, Readable {
 
   @Override
   public double calculateReadingTime() {
-    return transcript ? 1000/200 : duration;
+    return transcript ? 5 : duration;
   }
 
   @Override

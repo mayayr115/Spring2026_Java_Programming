@@ -6,10 +6,10 @@ public class Driver {
     Article article = new Article("Learn Java The Right Way",
     "Dr. Lawrence Decamora", 1200);
     article.displayInfo();
-    System.out.println("Estimated Reading Time: "
-    + article.calculateReadingTime() + " minutes");
+    System.out.println("Estimated Reading Time: " + article.calculateReadingTime() + " minutes");
     article.read();
     article.publish();
+    System.out.println();
 
     //Test#02
     Podcast podcast = new Podcast("Java Basics",
@@ -19,6 +19,7 @@ public class Driver {
     + podcast.calculateReadingTime() + " minutes");
     podcast.read();
     podcast.watch();
+    System.out.println();
 
     //Test#03
     Video video = new Video("Java Tutorial",
@@ -27,6 +28,7 @@ public class Driver {
     System.out.println("Estimated Watching Time: " + video.calculateReadingTime() + " minutes");
     video.watch();
     video.publish();
+    System.out.println();
 
     //Test#04
     Article article2 = new Article("OOP Principles",
@@ -35,6 +37,7 @@ public class Driver {
     System.out.println("Estimated Reading Time: "
     + article2.calculateReadingTime() + " minutes");
     article2.read();
+    System.out.println();
 
     //Test#05
     Podcast podcast2 = new Podcast("Advanced Java", "Michael Brown", 40.0, true);
@@ -43,12 +46,14 @@ public class Driver {
     + podcast2.calculateReadingTime() + " minutes");
     podcast2.read();
     podcast2.watch();
+    System.out.println();
 
     //Test#06
     Article miniArticle = new Article("Java Keywords", "Chris Lee", 50);
     miniArticle.displayInfo();
     System.out.println("Estimated Reading Time: " + miniArticle.calculateReadingTime() + " minutes");
     miniArticle.read();
+    System.out.println();
 
     // Test #07
     Content content1 = new Article(
@@ -58,6 +63,7 @@ public class Driver {
     content1.displayInfo();
     System.out.println("Estimated Reading Time: " + content1.calculateReadingTime() + " minutes");
     content1.publish();
+    System.out.println();
 
     // Test #08
     Readable readableContent = new Article(
@@ -65,6 +71,7 @@ public class Driver {
     "James Lee",
     600);
     readableContent.read();
+    System.out.println();
 
     // Test #09
     Watchable watchableContent = new Video(
@@ -72,6 +79,7 @@ public class Driver {
     "Sarah Brown",
     12.5);
     watchableContent.watch();
+    System.out.println();
 
     // Test #10
     Content[] contents = {

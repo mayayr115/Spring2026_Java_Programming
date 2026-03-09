@@ -1,5 +1,9 @@
 package Lab.Lab05;
 
+// Maya Ramkishun
+// 3/9/26
+// This program extends the Content class and implements the Readable.read() method
+
 public class Article extends Content implements Readable {
   private final int wordCount;
 
@@ -15,7 +19,7 @@ public class Article extends Content implements Readable {
 
   @Override
   public double calculateReadingTime() {
-    return wordCount/200;
+    return (float) wordCount/200;
   }
 
   @Override

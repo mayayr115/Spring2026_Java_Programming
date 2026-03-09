@@ -1,5 +1,9 @@
 package Lab.Lab05;
 
+// Maya Ramkishun
+// 3/9/26
+// This program is the parent class for Article, Video, and Podcast
+
 public abstract class Content {
   public String title;
   public String author;
