@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "GuessTheNumber",
+      "request": "launch",
+      "mainClass": "InClassActivity.ICA05.GuessTheNumber",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "Driver",
       "request": "launch",
       "mainClass": "Lab.Lab05.Driver",
