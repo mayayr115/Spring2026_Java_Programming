@@ -8,43 +8,37 @@ public class GuessTheNumber {
   public static void main(String[] args) {
     Scanner scnr = new Scanner(System.in);
     Random rand = new Random();
+    int userNum = 0;
     // Bound (inclusive) + starting number (inclusive) = 10 + 1 = range[1, 10]
     int randomNum = rand.nextInt(10) + 1;
-    int userNum;
-
+    
     System.out.println("Welcome to 'Guess the Number'!");
     System.out.println("I'm thinking of a number between 1 and 10.");
     
     do { 
       System.out.print("Enter your guess: ");
       userNum = scnr.nextInt();
-      if (userNum == randomNum) System.out.println("Congratulations! You guessed the right number!");
-      else {
-        try {
-          if (scnr.hasNextInt()) {
-            System.out.println("Try again!");
-          }
-        } catch (InputMismatchException npe) {
-          System.err.println("Error: That's not a valid number. Please enter an integer.");
-        }
 
+      if (userNum == randomNum) System.out.printf("Congratulations! You guessed the right number!%n%n");
+
+      else if (!(userNum instanceof int)) {
         try {
-          if (userNum >= 1 && userNum <= 10) {
-            System.out.println("Try again!");
-          }
-        } catch (IllegalArgumentException npe) {
-          System.err.println("Error: Please guess a number between 1 and 10.");
+          throw new InputMismatchException("Error: That's not a valid number. Please enter an integer.");
+        } catch (InputMismatchException e) {
+          System.out.printf("%s%n%n", e.getMessage());
+        } 
+      }
+
+      else if (userNum < 1 || userNum > 10) {
+        try {
+          throw new IllegalArgumentException("Error: Please guess a number between 1 and 10.");
+        } catch (IllegalArgumentException e) {
+          System.out.printf("%s%n%n", e.getMessage());
         }
       }
 
-      // try {
-      //   if (scnr.hasNextInt() && userNum >= 1 && userNum <= 10) System.out.printf("Try again!%n%n");
-      // } catch (InputMismatchException npe) {
-      //   System.err.println("Error: That's not a valid number. Please enter an integer.");
-      // } catch (IllegalArgumentException npe) {
-      //   System.err.println("Error: Please guess a number between 1 and 10.");
-      // }
+      else System.out.printf("Try again!%n%n");
+              
     } while (userNum != randomNum);
-
   }
 }
