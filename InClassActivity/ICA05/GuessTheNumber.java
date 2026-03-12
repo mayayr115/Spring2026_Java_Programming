@@ -8,7 +8,7 @@ public class GuessTheNumber {
   public static void main(String[] args) {
     Scanner scnr = new Scanner(System.in);
     Random rand = new Random();
-    int userNum = 0;
+    int userNum;
     // Bound (inclusive) + starting number (inclusive) = 10 + 1 = range[1, 10]
     int randomNum = rand.nextInt(10) + 1;
     
