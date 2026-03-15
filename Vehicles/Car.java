@@ -13,13 +13,13 @@ import java.util.Random;
  * By default, a Car object is for sale when created.
  * 
  * Example usage:
- * Car.setPrice(20000.00);   // Sets Car.price = 20000.00
- * Car.setMileage(60000.00);   // Sets Car.mileage = 60000.00
+ * Car.setPrice(20,000.00);   // Sets Car.price = 20000.00
+ * Car.setMileage(60,000.00);   // Sets Car.mileage = 60000.00
  * Car.toString();   // Returns Car(Price: $20,000, Mileage: 60,000 miles)
  * Car.setForSale(false);   // Sets Car.forSale = false
  * Car.isForSale()  // Returns false
- * Car.getPrice();   // Returns 20000.00
- * Car.getMileage();   // Returns 60000.00
+ * Car.getPrice();   // Returns 20,000.00
+ * Car.getMileage();   // Returns 600,00.00
  * 
  * @author Maya Ramkishun
  * @version 1.1
@@ -79,7 +79,8 @@ public class Car {
     } // toString
 
     /** Sets a new price for the car. 
-     * @param price the number to set the Car's new price
+     * @param price the number to set the Car's new price, must be non negative
+     * @throws IllegalArgumentException if {@code price} is negative
     */
     public void setPrice(double price) {
         if (price < 0) {
@@ -89,7 +90,8 @@ public class Car {
     } // setPrice
 
     /** Sets a new mileage for the car. 
-     * @param mileage the number to set the Car's new mileage
+     * @param mileage the number to set the Car's new mileage, must be non negative
+     * @throws IllegalArgumentException if {@code milage} is negative
     */
     public void setMileage(double mileage) {
         if (mileage < 0) {
