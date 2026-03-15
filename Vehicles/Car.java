@@ -13,13 +13,13 @@ import java.util.Random;
  * By default, a Car object is for sale when created.
  * 
  * Example usage:
- * Car.setPrice(20,000.00);   // Sets Car.price = 20000.00
- * Car.setMileage(60,000.00);   // Sets Car.mileage = 60000.00
+ * Car.setPrice(20,000.00);   // Sets Car.price = 20,000.00
+ * Car.setMileage(60,000.00);   // Sets Car.mileage = 60,000.00
  * Car.toString();   // Returns Car(Price: $20,000, Mileage: 60,000 miles)
  * Car.setForSale(false);   // Sets Car.forSale = false
  * Car.isForSale()  // Returns false
  * Car.getPrice();   // Returns 20,000.00
- * Car.getMileage();   // Returns 600,00.00
+ * Car.getMileage();   // Returns 60,000.00
  * 
  * @author Maya Ramkishun
  * @version 1.1
