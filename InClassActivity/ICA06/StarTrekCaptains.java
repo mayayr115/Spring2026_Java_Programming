@@ -19,6 +19,11 @@ public class StarTrekCaptains {
     public static String getShip(String lastName) {
         String result = "";
         //add your implementation
+        for (int i = 0; i < capt.length; i++) {
+            for (int j = 0; j < capt[i].length; j++) {
+                if (lastName.equals(capt[i][j])) result += capt[i][3];
+            }
+        }
         return result;
     }
 
@@ -26,6 +31,10 @@ public class StarTrekCaptains {
     public static String[] [] getCaptains(){
         String[][] result = new String[capt.length][2];
         //add your implementation
+        for (int i = 0; i < capt.length; i++) {
+            result[i][0] = capt[i][1];
+            result[i][1] = capt[i][2];
+        }
         return result;
     }
 
@@ -34,6 +43,9 @@ public class StarTrekCaptains {
         id = id.trim();
         String[] result = new String[0];
         //add your implementation
+        for (int i = 0; i < capt.length; i++) {
+            if (capt[i][0].equals(id)) result = capt[i];
+        }
         return result;
     }
 
