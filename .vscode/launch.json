@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StarTrekCaptains",
+      "request": "launch",
+      "mainClass": "InClassActivity.ICA06.StarTrekCaptains",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "GuessTheNumber",
       "request": "launch",
       "mainClass": "InClassActivity.ICA05.GuessTheNumber",
