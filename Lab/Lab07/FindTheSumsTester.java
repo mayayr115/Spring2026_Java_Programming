@@ -29,7 +29,7 @@ public class FindTheSumsTester {
 	public static void main(String[] args){
 		arrayToStringTest();
 		horizontalSumsTest();
-		// verticalSumsTest();
+		verticalSumsTest();
 	}
 	
 	/*
@@ -89,29 +89,29 @@ public class FindTheSumsTester {
 	/*
 	 * Test the verticalSums method in FindTheSums
 	 */	
-	// private static void verticalSumsTest(){
-	// 	int[][] verticalSums;
-	// 	String arrayAsString;
-	// 	System.out.println("Testing verticalSums method:");
-	// 	System.out.println("array1:");
-	// 	arrayAsString = FindTheSums.arrayToString(array1);
-	// 	System.out.println(arrayAsString);
-	// 	System.out.println("verticalSums(array1, 22):");
-	// 	verticalSums = FindTheSums.verticalSums(array1, 22);
-	// 	arrayAsString = FindTheSums.arrayToString(verticalSums);
-	// 	System.out.println(arrayAsString);
-	// 	System.out.println("array2:");
-	// 	arrayAsString = FindTheSums.arrayToString(array2);
-	// 	System.out.println(arrayAsString);
-	// 	System.out.println("verticalSums(array2, 14):");
-	// 	verticalSums = FindTheSums.verticalSums(array2, 14);
-	// 	arrayAsString = FindTheSums.arrayToString(verticalSums);
-	// 	System.out.println(arrayAsString);
-	// 	System.out.println("verticalSums(array2, 33):");
-	// 	verticalSums = FindTheSums.verticalSums(array2, 33);
-	// 	arrayAsString = FindTheSums.arrayToString(verticalSums);
-	// 	System.out.println(arrayAsString);
-	// 	System.out.println();
-	// }
+	private static void verticalSumsTest(){
+		int[][] verticalSums;
+		String arrayAsString;
+		System.out.println("Testing verticalSums method:");
+		System.out.println("array1:");
+		arrayAsString = FindTheSums.arrayToString(array1);
+		System.out.println(arrayAsString);
+		System.out.println("verticalSums(array1, 22):");
+		verticalSums = FindTheSums.verticalSums(array1, 22);
+		arrayAsString = FindTheSums.arrayToString(verticalSums);
+		System.out.println(arrayAsString);
+		System.out.println("array2:");
+		arrayAsString = FindTheSums.arrayToString(array2);
+		System.out.println(arrayAsString);
+		System.out.println("verticalSums(array2, 14):");
+		verticalSums = FindTheSums.verticalSums(array2, 14);
+		arrayAsString = FindTheSums.arrayToString(verticalSums);
+		System.out.println(arrayAsString);
+		System.out.println("verticalSums(array2, 33):");
+		verticalSums = FindTheSums.verticalSums(array2, 33);
+		arrayAsString = FindTheSums.arrayToString(verticalSums);
+		System.out.println(arrayAsString);
+		System.out.println();
+	}
 
 }
