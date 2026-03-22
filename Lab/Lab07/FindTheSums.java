@@ -5,8 +5,8 @@ public class FindTheSums {
     String arr = "";
     for (int i = 0; i < a.length; i++) {
       for (int j = 0; j < a[i].length; j++) {
-        if (j != a[i].length - 1) arr += a[i][j] + " ";
-        else arr += a[i][j];
+        arr += a[i][j];
+        if (j != a[i].length - 1) arr += " ";
       }
       if (i != a.length - 1) arr += "\n";
     }
