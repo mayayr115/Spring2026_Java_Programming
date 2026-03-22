@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FindTheSumsTester",
+      "request": "launch",
+      "mainClass": "Lab.Lab07.FindTheSumsTester",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "StarTrekCaptains",
       "request": "launch",
       "mainClass": "InClassActivity.ICA06.StarTrekCaptains",
