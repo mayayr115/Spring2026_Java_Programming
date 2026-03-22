@@ -15,14 +15,25 @@ public class FindTheSums {
 
   public static int[][] horizontalSums(int[][] a, int sumToFind) {
     int[][] b = new int[a.length][a[0].length];
-    int sum = 0;
+
+    // Loop to iterate through matrix
     for (int i = 0; i < a.length; i++) {
+      // Loop to iterate through the current array
       for (int j = 0; j < a[i].length; j++) {
-        sum += a[i][j];
-        if (sum == sumToFind) b[i][j] = a[i][j];
-        else b[i][j] = 0;
+        int sum = 0;
+        // Loop to add current element of current array to sum
+        for (int k = j; k < a[i].length; k++) {
+          sum += a[i][k];
+          // If sum is equal to sumToFind, we will add all of the values from the indices [j, k] to array b
+          if (sum == sumToFind) {
+            for (int l = j; l <= k; l++) {
+              b[i][l] = a[i][l];
+            }
+          }
+        }
       }
     }
+
     return b;
   }
 
