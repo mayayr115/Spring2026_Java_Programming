@@ -39,9 +39,8 @@ public class TicTacToeGame {
      * @param c the column where the move is being made.
      */
     public void playMove( char p, int r, int c ) {
-        //Replace the lines below with your implementation of the method.
-        System.out.println("playMove is not implemented yet");
-        System.exit(0);
+        board[r][c] = p;
+        turns++;
     }
 
     /**
@@ -53,10 +52,26 @@ public class TicTacToeGame {
      * @param p the character to check.
      */
     public boolean isWinner( char p ) {
-        //Replace the lines below with your implementation of the method.
-        System.out.println("isWinner is not implemented yet");
-        System.exit(0);
-        return false;
+        // Iterate through each space in a row
+        for (int r = 0; r < board.length; r++) {
+            int count = 0;
+            for (int c = 0; c < board.length; c++) {
+                if (board[r][c] == p) count++;
+            }
+            // Return true if there's 3 Xs or Os in a column
+            if (count == 3) return true;
+        }
+        // Iterate through each space in a column
+        for (int c = 0; c < board.length; c++) {
+            int count = 0;
+            for (int r = 0; r < board.length; r++) {
+                if (board[r][c] == p) count++;
+            }
+            // Return true if there's 3 Xs or Os in a column
+            if (count == 3) return true;
+        }
+        // Return true if there's 3 Xs or Os diagonal
+        return (board[0][0] == p && board[1][1] == p && board[2][2] == p) || (board[2][0] == p && board[1][1] == p && board[0][2] == p);
     }
 
     /**
@@ -65,10 +80,13 @@ public class TicTacToeGame {
      * @return {@code true} if the board is full and {@code false} otherwise.
      */
     public boolean isFull() {
-        //Replace the lines below with your implementation of the method.
-        System.out.println("isFull is not implemented yet");
-        System.exit(0);
-        return false;
+        // This method returns true if no space on the board is empty
+        for (int r = 0; r < board.length; r++) {
+            for (int c = 0; c < board.length; c++) {
+                if (board[r][c] == EMPTY) return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -76,10 +94,8 @@ public class TicTacToeGame {
      * @return {@code true} if the game is a tie and {@code false} otherwise.
      */
     public boolean isTie() {
-        //Replace the lines below with your implementation of the method.
-        System.out.println("isTie is not implemented yet");
-        System.exit(0);
-        return false;
+        // When the board is full and neither X or O has won, there is a tie
+        return isFull() && !isWinner(X) && !isWinner(O);
     }
 
 
