@@ -1,3 +1,5 @@
+package ListADT;
+
 /**
  * List Abstract Data Type (ADT) Interface.
  * This interface defines the methods required for a list implementation.

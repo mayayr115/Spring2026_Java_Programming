@@ -1,3 +1,5 @@
+package ListADT;
+
 // LinkedBasedList implementation of ListADT
 class LinkedBasedList implements ListADT {
     private Node head;
