@@ -14,21 +14,50 @@ class LinkedBasedList implements ListADT {
     // Adds an element at a specific index
     @Override
     public boolean add(int index, String s) {
-        //add your implementation
+        Node node = new Node(s);
+        if (index < 0 || index > size) return false;
+        if (index == 0) {
+            node.setNext(head);
+            head = node;
+        }
+        else {
+            Node current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.getNext(); // stop at node BEFORE index
+            }
+            node.setNext(current.getNext()); // new node points to the rest
+            current.setNext(node);           // previous node points to new node
+        }
+
+        size++; // increase list
         return true;
     }
 
     // Removes an element at a specific index
     @Override
     public String remove(int index) {
-        //add your implementation
-        return "";
+        String toBeRemoved;
+        if (index < 0 || index >= size) return "";
+        if (index == 0) {
+            toBeRemoved = head.getValue();
+            head = head.getNext();
+        } else {
+            Node current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.getNext();
+            }
+            toBeRemoved = current.getNext().getValue();
+            current.setNext(current.getNext().getNext());
+        }
+        size--; // shrink the list
+        return toBeRemoved;
     }
 
     @Override
     //Clear the entire list and reset the size
     public void clear() {
-        // add your implementation
+        head = null;
+        size = 0;
     }
 
     @Override

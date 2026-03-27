@@ -22,25 +22,25 @@ public class ArrayBasedList implements ListADT {
             list[i] = list[i-1];
         }
         list[index] = s;
-        size++;
+        size++; // increase the list
         return true;
     }
 
 
     @Override
     public String remove(int index) {
+        String removed = list[index]; // store removed item
         if (index < 0 || index >= size) return "";
-        for (int i = size; i > index ; i--) {
-            if (i == index) {
-                list[i] = "";
-            }
+        for (int i = index; i < size - 1; i++) {
+            list[i] = list[i+1];
         }
-        return "";
+        size--; // shrink the list
+        return removed;
     }
 
     @Override
     public void clear() {
-        // add your implementation
+        size = 0;
     }
 
     @Override
