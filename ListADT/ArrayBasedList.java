@@ -16,7 +16,13 @@ public class ArrayBasedList implements ListADT {
 
     @Override
     public boolean add(int index, String s) {
-        // add your implementation
+        if (index < 0 || index > size) return false;
+        if (size == list.length) resize();
+        for(int i = size; i > index ; i--) {
+            list[i] = list[i-1];
+        }
+        list[index] = s;
+        size++;
         return true;
     }
 
