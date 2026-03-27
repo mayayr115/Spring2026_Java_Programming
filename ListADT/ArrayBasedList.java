@@ -29,7 +29,12 @@ public class ArrayBasedList implements ListADT {
 
     @Override
     public String remove(int index) {
-        // add your implementation
+        if (index < 0 || index >= size) return "";
+        for (int i = size; i > index ; i--) {
+            if (i == index) {
+                list[i] = "";
+            }
+        }
         return "";
     }
 
