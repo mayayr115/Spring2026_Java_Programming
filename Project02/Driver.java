@@ -5,11 +5,11 @@ public class Driver {
     public static void main(String[] args) {
 
         // testing Underlying Stack Implementations.
-        // StackADT linkedStack = new LinkedListBasedStack();
+        StackADT linkedStack = new LinkedListBasedStack();
         StackADT arrayStack = new ArrayBasedStack();
 
-        // System.out.println("Testing LinkedListBasedStack");
-        // testStackOperations(linkedStack);
+        System.out.println("Testing LinkedListBasedStack");
+        testStackOperations(linkedStack);
 
         System.out.println("Testing ArrayBasedStack");
         testStackOperations(arrayStack);
@@ -32,8 +32,8 @@ public class Driver {
     // Utility Method to test Infix-To-Postfix problem
     // public static void testInfixToPostfix(StackADT operatorStack, StackADT valueStack) {
 
-    //     InfixConverter converter = new InfixConverter(operatorStack);
-    //     PostfixEvaluator evaluator = new PostfixEvaluator(valueStack);
+    //     // InfixConverter converter = new InfixConverter(operatorStack);
+    //     // PostfixEvaluator evaluator = new PostfixEvaluator(valueStack);
 
     //     // Define test cases: {infix expression, expected postfix, expected result}
     //     String[][] testCases = {
