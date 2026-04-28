@@ -8,6 +8,20 @@
       "type": "java",
       "name": "Driver",
       "request": "launch",
+      "mainClass": "Project02a.Driver",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
+      "name": "Driver",
+      "request": "launch",
+      "mainClass": "Project02.Driver",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
+      "name": "Driver",
+      "request": "launch",
       "mainClass": "ListADT.Driver",
       "projectName": "CS210_70c460d7"
     },

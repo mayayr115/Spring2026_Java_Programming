@@ -1,33 +1,40 @@
-// package Project02;
+package Project02;
 
 public class ArrayBasedStack implements StackADT {
   private String[] stack;
   private int capacity = 5;
-  private int topIdx = stack[0];
+  private int size = 0;
   
   @Override
   public void push(String item) {
-    stack.resize();
+    if (stack.length == capacity) resize();
+    stack[size] = item;
+    size++;
   }
 
   @Override
   public String pop() {
-    return "";
+    if (size >= 0) {
+      size--;
+    }
+    return stack[size];
   }
 
   @Override
   public String peek() {
-    return "";
+    return stack[size];
   }
 
   @Override
   public boolean isEmpty() {
-    return true;
+    return stack.length == 0;
   }
 
   public void resize() {
-    if (stack.length == capacity) {
-      String[] newStack = new String[capacity*2];
-    };
+    String[] newStack = new String[capacity*2];
+    for (int i = 0; i < stack.length; i++) {
+      newStack[i] = stack[i];
+    }
+    stack = newStack;
   }
 }

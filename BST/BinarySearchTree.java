@@ -1,9 +1,9 @@
-public class BinarySearchTree {
-  public BinarySearchTree(Node root) {
-    this.root = root;
-  }
+// public class BinarySearchTree {
+//   // public BinarySearchTree(Node root) {
+//   //   this.root = root;
+//   // }
 
-  public boolean seach(int value){
+//   // public boolean search(int value){
     
-  }
-}
+//   // }
+// }
