@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "countSubstringClass",
+      "request": "launch",
+      "mainClass": "Lab.Lab09.countSubstringClass",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
+      "name": "countSubstring",
+      "request": "launch",
+      "mainClass": "Lab.Lab09.countSubstring",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "Driver",
       "request": "launch",
       "mainClass": "Project02a.Driver",
