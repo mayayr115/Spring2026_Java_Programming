@@ -8,9 +8,20 @@ public class PostfixEvaluator {
   }
 
   public int evaluate (String input) {
-    String[] split = input.split(" ");;
-    applyOp(split);
-    return 0;
+    String[] x = input.split(" ");
+
+    for (int i = 0; i < x.length; i++) {
+        if (IsOp(x[i])) {
+            int b = Integer.parseInt(stack.pop());
+            int a = Integer.parseInt(stack.pop());
+            int result = applyOp(a, b, x[i]);
+            stack.push(String.valueOf(result));
+        } else {
+            stack.push(x[i]);
+        }
+    }
+
+    return Integer.parseInt(stack.pop());
   }
 
   public boolean IsOp(String el) {

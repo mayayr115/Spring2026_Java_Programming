@@ -13,31 +13,37 @@ public class InfixConverter {
 
     for (int i = 0; i < x.length; i++) {
       if (x[i].equals("(")) {
-        if (IsOp(x[i])) {
-          stack.push(x[i]);
+        stack.push(x[i]);
+      }
+      else if (x[i].equals(")")) {
+        while (!stack.isEmpty() && !stack.peek().equals("(")) {
+          post += stack.pop() + " ";
         }
+        stack.pop();
       }
       else if (IsOp(x[i])) {
+        while (!stack.isEmpty() && pemdas(x[i], stack.peek())) {
+          post += stack.pop() + " ";
+        }
         stack.push(x[i]);
       }
       else {
-        post += x[i];
+        post += x[i] + " ";
       }
     }
-    return post;
+    while (!stack.isEmpty()) {
+      post += stack.pop() + " ";
+    }
+    return post.trim();
+  }
+
+  public boolean pemdas(String op1, String op2) {
+    if (op2.equals("(") || op2.equals(")")) return false;
+    if ((op1.equals("*") || op1.equals("/")) && (op2.equals("+") || op2.equals("-"))) return false;
+    return true;
   }
 
   public boolean IsOp(String el) {
     return el.equals("+") | el.equals("-") | el.equals("/") | el.equals("*");
-  }
-
-  public int applyOp(int a, int b, String op) {
-    switch(op) {
-      case "+" -> {return a + b;}
-      case "-" -> {return a - b;}
-      case "/" -> {return a / b;}
-      case "*" -> {return a * b;}
-      default -> {return 0;}
-    }
   }
 }
