@@ -87,7 +87,7 @@ public class InfixConverter {
    * Checks if the parameter is one of the 4 math operators.
    * 
    * @param el an element in the String[]
-   * @return {@code true} if {@ el} is one of the 4 operators: +, -, /, or *
+   * @return {@code true} if {@code el} is one of the 4 operators: +, -, /, or *
    */
   public boolean isOp(String el) {
     return el.equals("+") | el.equals("-") | el.equals("/") | el.equals("*");
