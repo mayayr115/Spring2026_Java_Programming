@@ -1,4 +1,4 @@
-package Project02;
+package StackADT;
 
 public class Node {
   

@@ -17,8 +17,19 @@ public class Library {
     members.put(member.name, member.ID);
   }
 
-  public void SearchBook(Member member) {
-    members.put(member.name, member.ID);
+  public String SearchBookByTitle(String title) {
+    for (int i = 0; i < library.size(); i++) {
+      
+    }
+    return "";
+  }
+
+  public String SearchBookByAuthor(String author) {
+    return "";
+  }
+
+  public String SearchBookByISBN(int ISBN) {
+    return "";
   }
 
   public void IssueBook(Member member) {

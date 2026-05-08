@@ -1,4 +1,4 @@
-package Project02;
+package StackADT;
 /**
  * StackADT Interface defines the abstract behavior of a stack data structure
  * that stores String elements.

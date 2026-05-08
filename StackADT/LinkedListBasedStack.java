@@ -1,9 +1,9 @@
-package Project02;
+package StackADT;
 
 import java.util.EmptyStackException;
 
 /**
- * This class represents an Array Based Stack.
+ * This class represents a Linked List Based Stack.
  * This class includes methods for pushing an item into the stack,
  * popping the top item from the stack, peeking the top of the stack,
  * checking if the stack is empty, and resizing the stack if it's at max capacity.
@@ -11,28 +11,28 @@ import java.util.EmptyStackException;
  * All methods are able to be called after creating an instance.
  *
  * Example usage:
- * ArrayBasedStack.push("10");  // Puts 10 in the stack
- * ArrayBasedStack.pop();    // Pops 10 from the stack and returns the value
- * ArrayBasedStack.peek();   // Returns 10
- * ArrayBasedStack.isEmpty();   // Returns false
- * ArrayBasedStack.resize();   // Doubles the capacity of the stack
+ * LinkedListBasedStack.push("5");  // Puts 5 in the stack
+ * LinkedListBasedStack.pop();    // Pops 5 from the stack and returns the value
+ * LinkedListBasedStack.peek();   // Returns 5
+ * LinkedListBasedStack.isEmpty();   // Returns false
+ * LinkedListBasedStack.resize();   // Doubles the capacity of the stack
  *
  * @author Maya Ramkishun
  * @version 1.1
  * @since Spring 2026
  */
 
-public class ArrayBasedStack implements StackADT {
-  private String[] stack;
+public class LinkedListBasedStack implements StackADT{
+private String[] stack;
   private int capacity = 5;
   private int size = 0;
 
   /**
-   * Constructs an Array Based Stack with a capacity of 5.
+   * Constructs a Linked List Based Stack with a capacity of 5.
    */
-  public ArrayBasedStack() {
+  public LinkedListBasedStack() {
     stack = new String[capacity];
-  } // ArrayBasedStack
+  } // LinkedListBasedStack
   
   /**
    * Pushes an item into the stack.

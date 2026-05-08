@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Driver",
+      "request": "launch",
+      "mainClass": "StackADT.Driver",
+      "projectName": "CS210_70c460d7"
+    },
+    {
+      "type": "java",
       "name": "countSubstringClass",
       "request": "launch",
       "mainClass": "Lab.Lab09.countSubstringClass",

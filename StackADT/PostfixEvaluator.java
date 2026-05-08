@@ -1,4 +1,4 @@
-package Project02;
+package StackADT;
 
 /**
  * This class represents the Postfix Evaluator.
